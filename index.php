@@ -23,7 +23,7 @@
 		<tbody>
 		<?php	
 			$conn = mysqli_init();
-			$credentials_url = 'http://192.168.1.47:9090/get_credentials';
+			$credentials_url = 'http://84.23.55.222:9090/get_credentials';
 			$obj = json_decode(file_get_contents($credentials_url), true);
 			$conn = mysqli_connect("212.233.88.28", $obj['user'], $obj['password'], "TexUrok", 3306);
 			$sql = "SELECT id, date_unix, event_json FROM Morine_Events";
